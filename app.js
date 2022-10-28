@@ -1,9 +1,9 @@
-const fs = require("fs/promises");
+const fs = require("fs");
 const express = require("express");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const cors = require("cors");
-const _ = require("lodash");
-const { v4: uuid } = require("uuid");
+// const _ = require("lodash");
+// const { v4: uuid } = require("uuid");
 const port = process.env.PORT || 3000;
 
 const app = express();
