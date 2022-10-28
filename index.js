@@ -4,6 +4,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const _ = require("lodash");
 const { v4: uuid } = require("uuid");
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -20,4 +21,7 @@ app.get("/HNG", (req, res) => {
     bio,
   });
 });
-app.listen(3000, () => console.log("API server is running..."));
+// app.listen(3000, () => console.log("API server is running..."));
+app.listen(port, () => {
+  console.log(`App running on port ${port}.......`);
+});
