@@ -7,6 +7,7 @@ const { v4: uuid } = require("uuid");
 const port = process.env.PORT || 3000;
 
 const app = express();
+app.use(cors());
 
 app.get("/HNG", (req, res) => {
   const slackUsername = "Precious Nnorom";
@@ -22,11 +23,7 @@ app.get("/HNG", (req, res) => {
   });
 });
 // app.listen(3000, () => console.log("API server is running..."));
-app.use(
-  cors({
-    origin: "https://www.section.io",
-  })
-);
+// app.use(cors());
 app.listen(port, () => {
   console.log(`App running on port ${port}.......`);
 });
