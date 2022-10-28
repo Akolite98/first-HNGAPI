@@ -22,6 +22,11 @@ app.get("/HNG", (req, res) => {
   });
 });
 // app.listen(3000, () => console.log("API server is running..."));
+app.use(
+  cors({
+    origin: "https://www.section.io",
+  })
+);
 app.listen(port, () => {
   console.log(`App running on port ${port}.......`);
 });
